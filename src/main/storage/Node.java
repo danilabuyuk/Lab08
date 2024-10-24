@@ -3,16 +3,16 @@ package storage;
 public class Node<T>
 {
 
-    private Object data;
+    private T data;
     private Node<T> link;
 
-    public Node (Object data, Node<T> link)
+    public Node (T data, Node<T> link)
     {
         this.data = data;
         this.link = link;
     }
 
-    public Node (Object data)
+    public Node (T data)
     {
         this(data, null);
     }
@@ -32,12 +32,12 @@ public class Node<T>
         this.link = link;
     }
 
-    public Object getData ()
+    public T getData ()
     {
         return data;
     }
 
-    public void setData (Object data)
+    public void setData (T data)
     {
         this.data = data;
     }

@@ -38,11 +38,21 @@ public class Book implements Comparable<Book>
 
     public int compareTo (Book b2)
     {
-         if(this.equals(b2))
-         {
-            return 0;
-         }
-         return -1;
+        if (this.author.equals(b2.author))
+        {
+            if (this.title.equals(b2.title))
+            {
+                return 0;
+            }
+            else
+            {
+                return this.title.compareTo(b2.title);
+            }
+        }
+        else
+        {
+            return this.author.compareTo(b2.author);
+        }
     }
 
     public String toString ()
